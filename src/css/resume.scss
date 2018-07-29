@@ -1,0 +1,16 @@
+.container {
+	height: 100%;
+  width: 960px;
+	margin: auto;
+  margin-top: 5%;
+  display: grid;
+	justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  grid-template-columns: 3;
+  grid-template-rows: 4;
+  
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
