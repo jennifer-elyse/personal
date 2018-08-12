@@ -65,7 +65,7 @@ article {
     align-items: center;
     grid-column: 2;
     grid-row: 3;
-    margin: 2rem; // border: 1px solid #333;
+    margin: 2em; // border: 1px solid #333;
 }
 
 article>div {
@@ -87,6 +87,10 @@ li {
     }
 }
 
+a {
+	text-decoration-skip-ink: auto;
+}
+
 footer {
     justify-content: center;
     align-items: center;
@@ -94,7 +98,7 @@ footer {
     grid-column: 2;
     grid-row: 4;
     height: 100px;
-    margin: 2rem;
+    margin: 2em;
 }
 
 .ruler {
@@ -404,7 +408,7 @@ strong {
         border: 1px solid #888;
         height: 90%;
         width: calc(100vw - 40px);
-        max-width: 500px;
+        max-width: 400px;
         border-radius: 5px;
         box-shadow: 3px 6px 20px $shadow-color;
         overflow: auto;
@@ -429,7 +433,7 @@ strong {
 
     &__body {
         margin-top: 5%;
-        line-height: 1.25em;
+        line-height: 2em;
     }
 
     &__close {
