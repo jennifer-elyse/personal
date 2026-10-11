@@ -31,11 +31,11 @@ function showModal() {
 }
 
 function getDeveloper() {
-	let endpoint = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1116997/skillz.json";
+	const endpoint = "/data/skillz.json";
 
 	fetch(endpoint)
 		.then(function (response) {
-				console.log(response);
+				if (!response.ok) throw new Error('Unable to load skills: ' + response.status);
 				return response.json();
 		})
 		.then(function (json) {

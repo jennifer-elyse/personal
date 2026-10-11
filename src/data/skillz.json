@@ -1,0 +1,109 @@
+{
+  "developer": {
+    "name": "Jennifer Kirchner"
+  },
+  "skill": [
+    {
+      "id": "sass",
+      "imgSrc": "/images/sass.svg",
+      "imgAlt": "SASS Logo",
+      "description": "I take advantage of the use of variables, programming constructs, mixins, functions and extending classes with SASS as a preprocessor. I believe that SASS increases code maintainability and productivity. <br />I use PostCSS's autoprefixer plugin to ensure that my CSS works across browsers. Autoprefixer uses <a target=\"_blank\" href=\"http://caniuse.com\">Can I Use</a> so it's always up-to-date.<br/><br/><strong>Fun Fact:</strong> In my free time, I like to create CSS art on Codepen."
+    },
+    {
+      "id": "js",
+      "imgSrc": "/images/javascript.svg",
+      "imgAlt": "JS Logo",
+      "description": "I love the flexibility of JavaScript and enjoy writing code.  I am interested in working with a team that supports functional programming and using JavaScript in a more composable, declarative way. I'm proficient in Vanilla JS and have used React. I've written many large-scale, mission-critical applications using JS, including a wholesale ordering, billing, and invoicing eco-system and a consumer facing grocery loyalty system."
+    },
+    {
+      "id": "css",
+      "imgSrc": "/images/css.3.svg",
+      "imgAlt": "CSS Logo",
+      "description": "I love the declarative nature of CSS and always jump at the chance to work with it."
+    },
+    {
+      "id": "html",
+      "imgSrc": "/images/html-5.svg",
+      "imgAlt": "HTML Logo",
+      "description": "I've been writing HTML for 20 years and use semantic HTML 5."
+    },
+    {
+      "id": "github",
+      "imgSrc": "/images/github-octocat.svg",
+      "imgAlt": "Github Logo",
+      "description": "I have a public repository on Github. The code for this site is avilable in my public repository at <a target=\"_blank\" href=\"https://github.com/jennifer-elyse/\">https://github.com/jennifer-elyse</a>."
+    },
+    {
+      "id": "bitbucket",
+      "imgSrc": "/images/bitbucket.svg",
+      "imgAlt": "Bitbucket Logo",
+      "description": "I have a private and a small public repository on Bitbucket which can be found at <a target=\"_blank\" href=\"https://bitbucket.org/jenniferelyse/\">https://bitbucket.org/jenniferelyse</a>."
+    },
+    {
+      "id": "codepen",
+      "imgSrc": "/images/codepen.png",
+      "imgAlt": "Codepen Logo",
+      "description": "Codepen is my playground of choice. I enjoy participating in challenges using CSS and JavaScript. Please take a look at my profile: <br /><a target=\"_blank\" href=\"https://codepen.io/jennifer-elyse/\">https://codepen.io/jennifer-elyse/</a>"
+    },
+    {
+      "id": "json",
+      "imgSrc": "/images/json.svg",
+      "imgAlt": "JSON Logo",
+      "description": "{<br />\"developer\":{ <br />\"name\":\"Jenn\", <br /> \"attributes\":[<br />\"hard-working\", <br />\"empathetic\", <br />\"loves programming\", <br />\"always learning\", <br />\"good listener\"]}<br />}"
+    },
+    {
+      "id": "angular",
+      "imgSrc": "/images/angular.svg",
+      "imgAlt": "Angular Logo",
+      "description": "I've worked on a warehouse application in Angular that will improve warehouse operations workflow. While Angular is a popular solution, I prefer a framework that works with JaveScript instead of against it."
+    },
+    {
+      "id": "react",
+      "imgSrc": "/images/react.svg",
+      "imgAlt": "React Logo",
+      "description": "I've learning React on my own and would love to build more production apps with this library. I like the composability of a component architecture and the immutable nature of React. I've spent my own time re-writing applications for our company in React Native because I believe in it as a solution. One is ready to go live in the new year and I'm also building a new production application for deployment in the new year."
+    },
+    {
+      "id": "git",
+      "imgSrc": "/images/git.png",
+      "imgAlt": "git Logo",
+      "description": "git is my versioning system of choice and what I used to version this site. I also have experience with CVS and SVN."
+    },
+    {
+      "id": "grunt",
+      "imgSrc": "/images/grunt.svg",
+      "imgAlt": "Grunt Logo",
+      "description": "I used Grunt as a build tool for a consumer-facing loyaly system."
+    },
+    {
+      "id": "node",
+      "imgSrc": "/images/node.svg",
+      "imgAlt": "node Logo",
+      "description": "I've written REST services using node, Express and Hapi."
+    },
+    {
+      "id": "npm",
+      "imgSrc": "/images/npm.svg",
+      "imgAlt": "npm Logo",
+      "description": "I use npm as a package manager to make use of common tools such as Babel, Parcel, PostCSS and PostHTML."
+    },
+    {
+      "id": "php",
+      "imgSrc": "/images/php.svg",
+      "imgAlt": "php Logo",
+      "description": "I have about 2 years of php experience.  I wrote the REST services for a consumer-facing loyalty application using php as well as a mobile version of our customer catalog."
+    },
+    {
+      "id": "oracle",
+      "imgSrc": "/images/oracle.svg",
+      "imgAlt": "Oracle Logo",
+      "description": "I have extensive experience writing and tuning sql statements and stored procedures as well as database table design. These skills allow for collaboration with back-end developers."
+    },
+    {
+      "id": "java",
+      "imgSrc": "/images/java.svg",
+      "imgAlt": "Java Logo",
+      "description": "I wrote an ordering engine and an extraction, billing, and invoicing system in EJB 3.0 using session beans, message-driven beans, and POJOs.  Our application of Java favored composition over inheritance."
+    }
+  ]
+}
