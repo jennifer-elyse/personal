@@ -21,16 +21,27 @@ for (const name of ['main', 'resume']) {
   await writeFile(`${output}/css/${name}.css`, result.css);
 }
 
-for (const name of ['index', 'resume']) {
-  const html = await readFile(`${source}/${name}.html`, 'utf8');
+const pages = [
+  ['index.html', 'old/index.html'],
+  ['resume.html', 'resume.html'],
+];
+for (const [name, dest] of pages) {
+  const html = await readFile(`${source}/${name}`, 'utf8');
   const builtHtml = html
     .replaceAll('.scss"', '.css"')
     .replaceAll('"./css/', '"/css/')
-    .replaceAll('"./js/', '"/js/')
-    .replaceAll('"./index.html"', '"/"')
-    .replaceAll('"./resume.html"', '"/resume"');
-  await writeFile(`${output}/${name}.html`, builtHtml);
+    .replaceAll('"./js/', '"/js/');
+  await mkdir(`${output}/${dest}`.replace(/[^/]+$/, ''), { recursive: true });
+  await writeFile(`${output}/${dest}`, builtHtml);
 }
+
+await cp(`${root}clay-demo/assets`, `${output}/assets`, { recursive: true });
+const clay = await readFile(`${root}clay-demo/index.html`, 'utf8');
+const gate = `<nav class="site-links" aria-label="Site"><a href="/">Home</a><a href="/old">Old Site</a><a href="/resume">Resume</a><a href="/downloads/Clay-Studio.zip">Clay Studio</a><a href="https://frostly.net">frostly.net</a></nav><p class="download-gate">Download <a href="/downloads/Clay-Studio.zip">Clay Studio</a> to use Cursor, Codex, or Copilot. This page is read-only.</p><style>.site-links,.download-gate{font-family:Roboto,sans-serif}.site-links{display:flex;flex-wrap:wrap;gap:.8rem;padding:.55rem 1rem;background:#fff;border-bottom:1px solid #eadfce}.site-links a,.download-gate a{color:#9a2758}.download-gate{margin:0;padding:.7rem 1rem;background:#fff6ea;color:#3d2a22}#root .clay-shell{height:calc(100vh - 5.6rem);min-height:0}</style>`;
+const home = clay
+  .replace('<html lang="en">', '<html lang="en" data-clay="download">')
+  .replace('<div id="root"></div>', `${gate}<div id="root" inert></div>`);
+await writeFile(`${output}/index.html`, home);
 
 // A missing local asset must fail the build rather than ship a broken sticker.
 const skills = JSON.parse(await readFile(`${output}/data/skillz.json`, 'utf8'));
