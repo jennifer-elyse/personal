@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jennifer Kirchner · Trochoid</title>
+	<meta name="description" content="A trochoid drawn by a pen on a rolling circle. Jennifer Kirchner.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/trochoid.scss">
+</head>
+<body>
+	<nav class="site-links" aria-label="Site">
+		<a href="/" aria-current="page">Home</a>
+		<a href="/old">Old Site</a>
+		<a href="/resume">Resume</a>
+		<a href="/downloads/Clay-Studio.zip">Clay Studio</a>
+		<a href="https://frostly.net">frostly.net</a>
+		<a href="https://pong-bong.netlify.app/">Pong Bong</a>
+	</nav>
+	<main class="stage">
+		<canvas id="field"></canvas>
+		<header class="identity">
+			<p class="kicker">Jennifer Kirchner</p>
+			<h1>Trochoid</h1>
+		</header>
+		<form class="controls" id="controls">
+			<label class="path">
+				<span>Path</span>
+				<select name="kind">
+					<option value="inside" selected>Inside a circle</option>
+					<option value="outside">Outside a circle</option>
+					<option value="line">Along a line</option>
+				</select>
+			</label>
+			<label class="is-fixed">
+				<span>Fixed</span>
+				<output id="out-R">84</output>
+				<input type="range" name="R" min="24" max="140" value="84" aria-label="Fixed circle radius">
+			</label>
+			<label>
+				<span>Wheel</span>
+				<output id="out-r">24</output>
+				<input type="range" name="r" min="6" max="90" value="24" aria-label="Rolling circle radius">
+			</label>
+			<label>
+				<span>Pen</span>
+				<output id="out-d">42</output>
+				<input type="range" name="d" min="4" max="120" value="42" aria-label="Distance from the wheel center to the pen">
+			</label>
+			<p class="readout" id="readout">Hypotrochoid · wheel 24 · pen 42 · fixed 84</p>
+		</form>
+	</main>
+	<script src="./js/trochoid.js" defer></script>
+</body>
+</html>
