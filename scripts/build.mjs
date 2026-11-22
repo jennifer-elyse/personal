@@ -11,7 +11,9 @@ const output = `${root}dist`;
 await rm(output, { recursive: true, force: true });
 await mkdir(`${output}/css`, { recursive: true });
 
-for (const directory of ['images', 'data', 'js', 'downloads']) {
+// The Clay Studio ZIP is served by a Netlify redirect to the latest
+// GitHub Release; do not copy an outdated installer into the site build.
+for (const directory of ['images', 'data', 'js']) {
   await cp(`${source}/${directory}`, `${output}/${directory}`, { recursive: true });
 }
 
