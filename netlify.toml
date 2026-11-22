@@ -4,3 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Keep the existing public URL stable while serving the verified latest release.
+# The full installer is >100 MB and does not belong in the portfolio Git repository.
+[[redirects]]
+  from = "/downloads/Clay-Studio.zip"
+  to = "https://github.com/jennifer-elyse/clay-studio/releases/latest/download/clay-studio-main.zip"
+  status = 302
+  force = true
